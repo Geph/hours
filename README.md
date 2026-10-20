@@ -13,15 +13,31 @@ A minimal, colorful work-hours tracker for keeping work and time off in balance.
 - Supports private legacy datasets containing aggregated reporting periods, original notes, target adjustments, and carried balances without inventing daily dates for old totals.
 - Uses four-digit PIN sign-in and a shared server database so the same log is available across devices.
 
+## Screenshots
+
+### Quick time entry
+
+Colorful category buttons, the selected day's hours, the carried balance, and recent entries with timestamps.
+
+![Time entry and recent entries](docs/images/time-entry.png)
+
+### Work analytics
+
+Category totals and reporting-period bars with expected-hour markers, red overtime, and gray leave.
+
+![Category pie chart and reporting-period analytics](docs/images/analytics.png)
+
+These screenshots show a populated installation and were shared for this README. A new installation starts empty. The screenshots predate the category icons: an inbox for Admin, a voxel cube for WHIMC/QRF, a friendly robot for INVITE, an open book for Teaching, a sprout for Flex time, and a megaphone for Engagement. The same icons appear in entry buttons, recent entries, and history.
+
 ## Technology
 
 Vanilla HTML, CSS, and JavaScript modules, with a PHP JSON API and SQLite database. No frontend framework, npm dependencies, or build step is required. Production hosting needs PHP 8.2 or newer with PDO SQLite, Apache with rewrite support, and HTTPS. This is a server application, so GitHub Pages cannot host its backend.
 
 ## Public code, private hours
 
-**This repository contains no personal hour history.** The tracked `private/seed.example.json` has empty records and reporting periods. First-time setup creates a private `seed.json` starting in the current workweek.
+**No personal dataset, database, or exported hour history is included.** The two README screenshots intentionally show a populated installation; their visible totals are part of those shared images. The tracked `private/seed.example.json` has empty records and reporting periods. First-time setup creates a private `seed.json` starting in the current workweek.
 
-Git ignores private data, PIN configuration, SQLite files (including journal/WAL files), exports, backups, spreadsheets, screenshots, runtime folders, and deployment ZIPs. The app hashes the PIN instead of storing it in plaintext. The protected `private` directory is denied by Apache rules. The state API requires an authenticated session; an authenticated browser can read its own hours.
+Git ignores private data, PIN configuration, SQLite files (including journal/WAL files), exports, backups, spreadsheets, screenshots other than the two explicitly shared README images, runtime folders, and deployment ZIPs. The app hashes the PIN instead of storing it in plaintext. The protected `private` directory is denied by Apache rules. The state API requires an authenticated session; an authenticated browser can read its own hours.
 
 Never force-add private files or upload a personal deployment archive to a GitHub release. `.gitignore` does not remove data already committed to Git history.
 

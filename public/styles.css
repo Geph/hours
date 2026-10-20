@@ -110,3 +110,8 @@
 .trend-row.stacked-trend,.trend-row.daily-trend-row{margin-top:10px}
 
 .last-entered{margin:0;padding:0 22px 14px;font-size:11px;line-height:1.6;color:#617086}.last-entered time{font-weight:600;color:#334155}.entry-timestamp{margin-top:5px;color:#747b8c;font-size:10px;line-height:1.6;overflow-wrap:anywhere}
+
+/* Shared category pictograms stay legible on colorful buttons and tinted history tiles. */
+.category-icon{display:block;width:23px;height:23px;flex:0 0 auto}
+.category-button>.category-icon{width:22px;height:22px;margin-right:1px}
+.entry-mark>.category-icon{width:21px;height:21px}
