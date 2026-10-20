@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b19d8"><meta name="description" content="Geph's private work hours log, with quick entry and weekly balances.">
+  <title>Geph’s Hours</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%235b19d8'/%3E%3Cpath d='M20 15h24M20 49h24M23 15v9l18 16v9M41 15v9L23 40v9' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead"><div class="header-inner">
+    <a class="brand" href="#track" aria-label="Geph’s Hours home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 6h16M12 34h16M14 6v8l12 12v8M26 6v8L14 26v8"/></svg></span><span><strong>Geph’s Hours</strong><span class="tagline">Towards Work-Life Balance</span></span></a>
+    <div class="header-actions"><span id="sync" role="status">Connecting…</span><time class="header-date" id="header-date" hidden></time><button class="header-button" id="export-open" hidden>Export</button><button class="header-button" id="logout" hidden>Sign out</button></div>
+  </div></header>
+  <nav class="nav-shell" id="nav" hidden aria-label="Main"><div><a href="#track" data-view="track">Log time</a><a href="#analytics" data-view="analytics">Analytics</a><a href="#history" data-view="history">History</a></div></nav>
+  <main id="app"><div class="loading">Opening your log…</div></main>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="entry-dialog" aria-labelledby="edit-title"><div class="dialog-heading"><h2 id="edit-title">Edit entry</h2><button class="icon-button" data-close="entry-dialog" aria-label="Close">×</button></div><div id="edit-body"></div></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-heading"><h2 id="export-title">Take your hours with you</h2><button class="icon-button" data-close="export-dialog" aria-label="Close">×</button></div><p>CSV works in Excel. The JSON backup includes all records, period targets, notes, and import details.</p><div class="export-options"><button id="export-csv" class="primary">Download all hours (CSV)</button><button id="export-json" class="secondary">Download complete backup (JSON)</button></div><p class="muted small">Analytics also offers a CSV of your selected range. Keep backups somewhere private.</p></dialog>
+  <script type="module" src="app.mjs"></script>
+</body></html>

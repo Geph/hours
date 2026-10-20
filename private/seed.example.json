@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "records": [],
+  "periods": [],
+  "settings": {
+    "weeklyStart": null,
+    "weeklyHours": 40,
+    "timezone": "America/Denver"
+  },
+  "import": {
+    "sheet": "",
+    "source": "",
+    "periodCount": 0,
+    "recordCount": 0,
+    "totalHours": 0,
+    "yearInference": "",
+    "categoryPolicy": "",
+    "audit": []
+  }
+}
